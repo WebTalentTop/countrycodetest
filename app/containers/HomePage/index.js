@@ -52,7 +52,21 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
             <H1>
               Enter Country Code
             </H1>
-            
+            <Form onSubmit={this.props.onSubmitForm}>
+              <label htmlFor="countrycode">
+                <FormattedMessage {...messages.trymeMessage} />
+                <AtPrefix>
+                  <FormattedMessage {...messages.trymeAtPrefix} />
+                </AtPrefix>
+                <Input
+                  id="countrycode"
+                  type="text"
+                  placeholder="USA"
+                  value={this.props.countrycode}
+                  onChange={this.props.onChangeCountrycode}
+                />
+              </label>
+            </Form>
             <ReposList {...reposListProps} />
           </Section>
         </div>
