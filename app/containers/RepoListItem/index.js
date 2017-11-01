@@ -17,7 +17,10 @@ export class RepoListItem extends React.PureComponent { // eslint-disable-line r
     const item = this.props.item;
     const content = (
       <Wrapper>
-       
+        <div><strong>Match Number: {item.match_number}</strong></div>
+        <div><strong>Location: {item.location}</strong></div>
+        <div><strong>{item.datetime}</strong></div>
+        <div><strong>Status: {item.status}</strong></div>
       </Wrapper>
     );
 
